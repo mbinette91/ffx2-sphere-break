@@ -1,3 +1,5 @@
+.clear { clear:both; }
+
 .section {
 	clear: both;
 }
@@ -35,14 +37,43 @@
 	font-weight: bold;
 }
 
+.box {
+	position: relative;
+	width: 300px;
+	background: url('images/options.png');
+}
+
+.box-content {
+	margin: 3px;
+	padding: 10px;
+	border: 1px solid rgba(30, 30, 30, 0.5);
+    box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
+    			-2px -2px 3px rgba(200,200,200,0.5);
+}
+
 .options {
 	position: absolute;
 	left: 0;
 	top: 100px;
-	background: rgba(0, 0, 0, 0.5);
 }
 
-.options input, .options button {
+.options input {
+	width: 50px;
+}
+
+.advanced-options {
+	position: absolute;
+	left: 0;
+	top: 200px;
+}
+
+.actions {
+	position: absolute;
+	left: 0;
+	top: 270px;
+}
+
+.options input, .actions button {
 	color: #000000;
 }
 
@@ -85,11 +116,20 @@
 	background: blue;
 }
 
-#solution {
+.box.solution {
 	position: absolute;
 	top: 50px;
 	right: 0;
+}
+.box.solution .box-content {
+	height: 105px;
+}
+
+.box.solution #solution {
 	zoom: 30%;
+	position: absolute;
+	top: 25px;
+	right: 55px;
 }
 
 /* What section */

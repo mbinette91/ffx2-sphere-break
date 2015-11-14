@@ -36,39 +36,54 @@
 						<input type="text" class="coin" value="X" id="grid-4-4" tabindex="1">
 					</div>
 				</div>
-				<div id="solution">
-					<div class="row">
-						<input type="text"class="coin"  value="X" id="grid-1-1">
-						<input type="text"class="coin"  value="X" id="grid-1-2">
-						<input type="text"class="coin"  value="X" id="grid-1-3">
-						<input type="text"class="coin"  value="X" id="grid-1-4">
-					</div>
-					<div class="row">
-						<input type="text" class="coin" value="X" id="grid-2-1">
-						<input type="text" class="entry coin" value="X" id="grid-2-2">
-						<input type="text" class="entry coin" value="X" id="grid-2-3">
-						<input type="text" class="coin" value="X" id="grid-2-4">
-					</div>
-					<div class="row">
-						<input type="text" class="coin" value="X" id="grid-3-1">
-						<input type="text" class="entry coin" value="X" id="grid-3-2">
-						<input type="text" class="entry coin" value="X" id="grid-3-3">
-						<input type="text" class="coin" value="X" id="grid-3-4">
-					</div>
-					<div class="row">
-						<input type="text" class="coin" value="X" id="grid-4-1">
-						<input type="text" class="coin" value="X" id="grid-4-2">
-						<input type="text" class="coin" value="X" id="grid-4-3">
-						<input type="text" class="coin" value="X" id="grid-4-4">
+				<div class="solution box">
+					<div class="box-content">
+						Score: <span id="score"></span><br/>
+						<div id="solution">
+							<div class="row">
+								<input type="text"class="coin"  value="X" id="grid-1-1">
+								<input type="text"class="coin"  value="X" id="grid-1-2">
+								<input type="text"class="coin"  value="X" id="grid-1-3">
+								<input type="text"class="coin"  value="X" id="grid-1-4">
+							</div>
+							<div class="row">
+								<input type="text" class="coin" value="X" id="grid-2-1">
+								<input type="text" class="entry coin" value="X" id="grid-2-2">
+								<input type="text" class="entry coin" value="X" id="grid-2-3">
+								<input type="text" class="coin" value="X" id="grid-2-4">
+							</div>
+							<div class="row">
+								<input type="text" class="coin" value="X" id="grid-3-1">
+								<input type="text" class="entry coin" value="X" id="grid-3-2">
+								<input type="text" class="entry coin" value="X" id="grid-3-3">
+								<input type="text" class="coin" value="X" id="grid-3-4">
+							</div>
+							<div class="row">
+								<input type="text" class="coin" value="X" id="grid-4-1">
+								<input type="text" class="coin" value="X" id="grid-4-2">
+								<input type="text" class="coin" value="X" id="grid-4-3">
+								<input type="text" class="coin" value="X" id="grid-4-4">
+							</div>
+						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
-				<div class="options">
-					<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
-					<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
-					<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
-					Score: <span id="score"></span><br/>
-					<button onclick="find()">FIND</button>
-					<button onclick="incr()">Incr</button>
+				<div class="options box">
+					<div class="box-content">
+						<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
+						<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
+					</div>
+				</div>
+				<div class="advanced-options box">
+					<div class="box-content">
+						<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
+					</div>
+				</div>
+				<div class="actions box">
+					<div class="box-content">
+						<button onclick="find()">FIND</button>
+						<button onclick="incr()">Incr</button>
+					</div>
 				</div>
 			</div>
 		</div>
