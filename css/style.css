@@ -31,7 +31,7 @@ input[type="number"] {
 /* Main section */
 #main-section {
 	height: 405px;
-	background: url('images/background-main.jpg') rgb(45,22,6);
+	background: url('../images/background-main.jpg') rgb(45,22,6);
 	color: #FFFFFF;
 }
 
@@ -47,7 +47,7 @@ input[type="number"] {
 	top: 0; left: 0;
 	width: 300px;
 	height: 200px;
-	background: url('images/logo.png') center -20px no-repeat;
+	background: url('../images/logo.png') center -20px no-repeat;
 	background-size: 180px;
 	text-align: center;
 	line-height: 170px;
@@ -56,7 +56,7 @@ input[type="number"] {
 .box {
 	padding: 3px;
 	position: relative;
-	background: url('images/options.png');
+	background: url('../images/options.png');
 	margin-bottom: 20px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -157,13 +157,13 @@ input[type="number"] {
 	color: rgba(255,255,255,0.8);
 	border-radius: 100px;
 	border: 0;
-	background: url('images/coin.gif') center center;
+	background: url('../images/coin.gif') center center;
 	background-size: 75px;
 	margin: 6px 5px;
 }
 
 .entry {
-	background: url('images/coin-entry.gif') center center;
+	background: url('../images/coin-entry.gif') center center;
 	background-size: 75px;
 }
 
@@ -184,7 +184,7 @@ input[type="number"] {
 	text-align: center;
 	border-radius: 100px;
 	border: 0;
-	background: url('images/sphere.png') center center no-repeat;
+	background: url('../images/sphere.png') center center no-repeat;
 	background-size: 85px;
     box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
     			-2px -2px 3px rgba(200,200,200,0.5);
@@ -230,13 +230,13 @@ input[type="number"] {
 	position: relative;
 	top: 3px;
 	margin-right: 4px;
-	background: url('images/icon-unknown.png');
+	background: url('../images/icon-unknown.png');
 }
 .box.solution .echo-results .success {
-	background: url('images/icon-success.png');
+	background: url('../images/icon-success.png');
 }
 .box.solution .echo-results .error {
-	background: url('images/icon-error.png');
+	background: url('../images/icon-error.png');
 }
 
 .box.solution #solution {
@@ -266,7 +266,7 @@ input[type="number"] {
 .separator {
 	width: 100%;
 	height: 50px;
-	background: url('images/separator.png') center 30px no-repeat;
+	background: url('../images/separator.png') center 30px no-repeat;
 	background-size: 250px;
 }
 
