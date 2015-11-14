@@ -1,323 +1,95 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<style>
-			.coin {
-				width: 50px;
-				height: 50px;
-				text-align: center;
-				font-size: 30px;
-				border-radius: 100px;
-			}
-
-			.entry {
-				background: gold;
-			}
-
-			#main_grid {
-				float: left;
-			}
-			#solution {
-				float: right;
-			}
-		</style>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 	</head>
 	<body>
-		<div id="main_grid">
-			<div class="row">
-				<input type="text"class="coin"  value="X" id="grid-1-1">
-				<input type="text"class="coin"  value="X" id="grid-1-2">
-				<input type="text"class="coin"  value="X" id="grid-1-3">
-				<input type="text"class="coin"  value="X" id="grid-1-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-2-1">
-				<input type="text" class="entry coin" value="X" id="grid-2-2">
-				<input type="text" class="entry coin" value="X" id="grid-2-3">
-				<input type="text" class="coin" value="X" id="grid-2-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-3-1">
-				<input type="text" class="entry coin" value="X" id="grid-3-2">
-				<input type="text" class="entry coin" value="X" id="grid-3-3">
-				<input type="text" class="coin" value="X" id="grid-3-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-4-1">
-				<input type="text" class="coin" value="X" id="grid-4-2">
-				<input type="text" class="coin" value="X" id="grid-4-3">
-				<input type="text" class="coin" value="X" id="grid-4-4">
+		<div id="main-section" class="section">
+			<div class="section-content">
+				<div id="logo">Sphere Break</div>
+				<div id="main_grid">
+					<div class="row">
+						<input type="text"class="coin"  value="X" id="grid-1-1">
+						<input type="text"class="coin"  value="X" id="grid-1-2">
+						<input type="text"class="coin"  value="X" id="grid-1-3">
+						<input type="text"class="coin"  value="X" id="grid-1-4">
+					</div>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-2-1">
+						<input type="text" class="entry coin" value="X" id="grid-2-2">
+						<input type="text" class="entry coin" value="X" id="grid-2-3">
+						<input type="text" class="coin" value="X" id="grid-2-4">
+					</div>
+					<input type="text" id="core_number" value="7"/>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-3-1">
+						<input type="text" class="entry coin" value="X" id="grid-3-2">
+						<input type="text" class="entry coin" value="X" id="grid-3-3">
+						<input type="text" class="coin" value="X" id="grid-3-4">
+					</div>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-4-1">
+						<input type="text" class="coin" value="X" id="grid-4-2">
+						<input type="text" class="coin" value="X" id="grid-4-3">
+						<input type="text" class="coin" value="X" id="grid-4-4">
+					</div>
+				</div>
+				<div id="solution">
+					<div class="row">
+						<input type="text"class="coin"  value="X" id="grid-1-1">
+						<input type="text"class="coin"  value="X" id="grid-1-2">
+						<input type="text"class="coin"  value="X" id="grid-1-3">
+						<input type="text"class="coin"  value="X" id="grid-1-4">
+					</div>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-2-1">
+						<input type="text" class="entry coin" value="X" id="grid-2-2">
+						<input type="text" class="entry coin" value="X" id="grid-2-3">
+						<input type="text" class="coin" value="X" id="grid-2-4">
+					</div>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-3-1">
+						<input type="text" class="entry coin" value="X" id="grid-3-2">
+						<input type="text" class="entry coin" value="X" id="grid-3-3">
+						<input type="text" class="coin" value="X" id="grid-3-4">
+					</div>
+					<div class="row">
+						<input type="text" class="coin" value="X" id="grid-4-1">
+						<input type="text" class="coin" value="X" id="grid-4-2">
+						<input type="text" class="coin" value="X" id="grid-4-3">
+						<input type="text" class="coin" value="X" id="grid-4-4">
+					</div>
+				</div>
+				<div class="options">
+					<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
+					<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
+					<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
+					Score: <span id="score"></span><br/>
+					<button onclick="find()">FIND</button>
+					<button onclick="incr()">Incr</button>
+				</div>
 			</div>
 		</div>
-		<div id="solution">
-			<div class="row">
-				<input type="text"class="coin"  value="X" id="grid-1-1">
-				<input type="text"class="coin"  value="X" id="grid-1-2">
-				<input type="text"class="coin"  value="X" id="grid-1-3">
-				<input type="text"class="coin"  value="X" id="grid-1-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-2-1">
-				<input type="text" class="entry coin" value="X" id="grid-2-2">
-				<input type="text" class="entry coin" value="X" id="grid-2-3">
-				<input type="text" class="coin" value="X" id="grid-2-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-3-1">
-				<input type="text" class="entry coin" value="X" id="grid-3-2">
-				<input type="text" class="entry coin" value="X" id="grid-3-3">
-				<input type="text" class="coin" value="X" id="grid-3-4">
-			</div>
-			<div class="row">
-				<input type="text" class="coin" value="X" id="grid-4-1">
-				<input type="text" class="coin" value="X" id="grid-4-2">
-				<input type="text" class="coin" value="X" id="grid-4-3">
-				<input type="text" class="coin" value="X" id="grid-4-4">
+		<div id="what-section" class="section">
+			<div class="section-content">
+				<h2>What is this?</h2>
 			</div>
 		</div>
-		<input type="text" id="core_number" value="7"/> Core number<br/>
-		<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
-		<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
-		<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
-		Score: <span id="score"></span><br/>
-		<button onclick="find()">FIND</button>
-		<button onclick="incr()">Incr</button>
+		<div id="faq-section" class="section">
+			<div class="section-content">
+				<h2>FAQ <small>(Frequently asked questions)</small></h2>
+			</div>
+		</div>
+		<div id="footer-section" class="section">
+			<div class="section-content">
+				Built with ❤
+			</div>
+		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="utils.js"></script>
-	<script>
-		// Algorithm could be improved vastly by finding numbers instead of coins. 9 possible values (MAX) instead of 16 different coins. Less permutations. And then determine which coins to pick if solution works.
-		// This solution starts lagging at 16 coins and 6+ sequences.
-		function Grid() {
-			this.coins = [];
-			this.entryCoins = [];
-			this.borderCoins = [];
-		}
-
-		Grid.prototype.addCoin = function(coin) {
-			this.coins.push(coin);
-
-			if(coin.isEntry)
-				this.entryCoins.push(coin);
-			else
-				this.borderCoins.push(coin);
-		}
-
-		Grid.prototype.find = function(params) {
-			var solution = null;
-
-			for(var i in this.entryCoins) {
-				var possibleSolution = new Solution();
-				var coin = this.entryCoins[i];
-				this.tryAddCoin(this.coins.clone().remove(coin), possibleSolution.try(coin), params);
-			}
-
-			return CURRENT_MAX_SOLUTION;
-		}
-
-		var CURRENT_MAX_SOLUTION = new Solution();
-		Grid.prototype.tryAddCoin = function(available_coins, current_solution, params) {
-			if(current_solution.satisfyPrimaryCondition(params)) {
-				var score = current_solution.score(params);
-
-				if( score> CURRENT_MAX_SOLUTION.score(params))
-					CURRENT_MAX_SOLUTION = current_solution;
-
-				return; // Nothing else to do here.
-			}
-			var MAX_LENGTH = Math.max(5, params.coinCount) // TO-DO: Fix 2nd condition. It's just so it doesn't compute too big sequences...
-			if(current_solution.length == MAX_LENGTH) {
-				return; // Let's not go further.
-			}
-
-			for(var i in available_coins) {
-				var coin = available_coins[i];
-				var possible_solution = current_solution.try(coin)
-				this.tryAddCoin(available_coins.clone().remove(coin), possible_solution, params);
-			}
-
-			return false;
-		}
-
-		function Coin(elem, value, isEntry, bonus) {
-			this.elem = elem;
-			this.value = value;
-			this.isEntry = isEntry;
-			this.bonus = bonus;
-		}
-
-		function Solution(coins) {
-			if(coins)
-				this.coins = coins
-			else
-				this.coins = []
-
-			this.length = this.coins.length;
-		}
-
-		Solution.prototype.try = function(coin) {
-			return new Solution(this.coins.concat([coin]));
-		}
-
-		Solution.prototype.works = function(config) {
-			var total = 0;
-
-			if(this.coins.length <= 0)
-				return false;
-
-			for(var i = 0; i < this.coins.length - 1; i++) {
-				total += this.coins[i].value;
-				if((total % config.coreNumber) == 0)
-					return false; // Multiple has been obtained too soon! 
-			}
-			total += this.coins[this.coins.length - 1].value;
-
-			return (total % config.coreNumber) == 0;
-		}
-
-		Solution.prototype.total = function() {
-			var total = 0;
-
-			for(var i = 0; i < this.coins.length; i++) {
-				total += this.coins[i].value;
-			}
-
-			return total;
-		}
-
-		Solution.prototype.getNumberOf = function(n) {
-			var total = 0;
-
-			for(var i = 0; i < this.coins.length; i++) {
-				if(this.coins[i].value == n)
-					total += 1;
-			}
-
-			return total;
-		}
-
-		Solution.prototype.toString = function() {
-			var values = [];
-
-			for(var i in this.coins) {
-				values.push(this.coins[i].value);
-			}
-
-			return values.toString();
-		}
-
-		Solution.prototype.satisfyCoinCountEcho = function(config) {
-			return this.length == config.coinCount;
-		}
-
-		Solution.prototype.satisfyMultiplierEcho = function(config) {
-			return config.multiplierEcho == (this.total() / config.coreNumber);
-		}
-
-		Solution.prototype.satisfyPrimaryCondition = function(config) {
-			if(config.priority == 'coin_count')
-				return this.satisfyCoinCountEcho(config);
-			else
-				return this.satisfyMultiplierEcho(config);
-		}
-		Solution.prototype.satisfySecondaryCondition = function(config) {
-			if(config.priority == 'coin_count')
-				return this.satisfyMultiplierEcho(config);
-			else
-				return this.satisfyCoinCountEcho(config);
-		}
-
-
-
-		Solution.prototype.score = function(config) {
-			if(!this.works(config)) {
-				return -1;
-			}
-
-			var score = 0;
-
-			if(config.maximizeBorder) {
-				for(var i in this.coins) {
-					if(!this.coins[i].isEntry)
-						score += 1;
-				}
-			}
-			else {
-				for(var i in this.coins) {
-					if(this.coins[i].isEntry)
-						score += 1;
-				}
-			}
-			quotaBonus = this.coins[0].bonus; // Only for first coin played
-
-			var bonus = 1;
-			if(this.satisfySecondaryCondition(config))
-				bonus = 1000; // This wins.
-
-			bonus += 5.1 * this.getNumberOf(9); // Some advantages to 9s being played. But not much.
-
-			if(quotaBonus != 0)
-				return (score * quotaBonus) + bonus; // Even make a 0 score solution win over everything else
-			else
-				return score + bonus; // Even make a 0 score solution win over everything else
-		}
-
-		function createCurrentGrid() {
-			var grid = new Grid();
-
-			$("#main_grid .coin").each(function() {
-				var value = parseInt($(this).val());
-				var parts = $(this).val().split('*');
-				var bonus = 0;
-				if(parts.length > 1)
-					bonus = parseInt(parts[1]);
-				if(value >= 1 && value <= 9) {
-					var coin = new Coin($(this), value, $(this).hasClass('entry'), bonus);
-					grid.addCoin(coin);
-				}
-			});
-
-			return grid;
-		}
-
-		var INCREMENTING = false;
-		$("input").change(function(){
-			if(!INCREMENTING)
-				find(); // Refresh all the time except when incrementing.
-		});
-
-		function find() {
-			CURRENT_MAX_SOLUTION = new Solution();
-			var grid = createCurrentGrid();
-			var params = {
-				coreNumber: parseInt($("#core_number").val()),
-				coinCount: parseInt($("#coin_count").val()),
-				multiplierEcho: parseInt($("#multiplier_echo").val()),
-				priority: $("#priority:checked").val(),
-				maximizeBorder: $('#maximize_border').is(":checked")
-			}
-
-			//console.log(grid)
-			//console.log(grid.find(params))
-			pos = 0;
-			$("#solution .coin").val("");
-			for(var i in CURRENT_MAX_SOLUTION.coins) {
-				pos += 1;
-				$("#solution").find("#"+CURRENT_MAX_SOLUTION.coins[i].elem.attr('id')).val( pos )
-			}
-			$("#score").html(CURRENT_MAX_SOLUTION.score(params))
-		}
-
-		function incr() {
-			INCREMENTING = true;
-			$("#main_grid .coin:not(.entry)").each(function(){
-				var newVal = parseInt($(this).val())+1;
-				if(newVal <= 9)
-					$(this).val(newVal)
-				else
-					$(this).val("")
-			});
-			INCREMENTING = false;
-			find(); // Refresh.
-		}
-	</script>
+	<script src="script.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 </html>
