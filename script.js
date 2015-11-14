@@ -205,12 +205,14 @@ function find() {
         coreNumber: parseInt($("#core_number").val()),
         coinCount: parseInt($("#coin_count").val()),
         multiplierEcho: parseInt($("#multiplier_echo").val()),
-        priority: $("#priority:checked").val(),
+        priority: $("[name=priority]:checked").val(),
         maximizeBorder: $('#maximize_border').is(":checked")
     }
 
-    //console.log(grid)
-    //console.log(grid.find(params))
+    console.log(grid)
+    console.log(params)
+    console.log(grid.find(params))
+    
     pos = 0;
     $("#solution .coin").val("");
     for(var i in CURRENT_MAX_SOLUTION.coins) {

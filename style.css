@@ -18,7 +18,7 @@
 
 /* Main section */
 #main-section {
-	height: 450px;
+	height: 405px;
 	background: #3c1f11;
 	color: #FFFFFF;
 }
@@ -33,21 +33,23 @@
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	position: absolute;
 	top: 0; left: 0;
-	width: 275px;
+	width: 300px;
 	height: 200px;
-	background: url('images/logo.png') center -30px no-repeat;
+	background: url('images/logo.png') center -20px no-repeat;
 	background-size: 180px;
 	text-align: center;
-	line-height: 150px;
+	line-height: 170px;
 }
 
 .box {
+	padding: 3px;
 	position: relative;
 	background: url('images/options.png');
+	margin-bottom: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .box-content {
-	margin: 3px;
 	padding: 10px;
 	border: 1px solid rgba(30, 30, 30, 0.5);
     box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
@@ -62,31 +64,61 @@
     border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0)) 1 1;
 	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,1), rgba(232,192,86,0));
 	font-weight: bold;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .ss-left {
-	width: 275px;
+	width: 300px;
 	position: absolute;
 	left: 0;
-	top: 110px;
+	top: 140px;
 }
 
-.ss-left .box {
-	margin-bottom: 20px;
-}
-
-.options input {
+.echo.box input {
 	width: 50px;
 	color: #000000;
+}
+
+.echo.box .echo-type {
+	font-weight: bold;
+	text-align: center;
+	width: 49%;
+	display: inline-block;
+}
+.echo.box .echo-type label {
+	margin-bottom: 0;
+}
+
+.echo.box .echo-type .value {
+	margin-bottom: 3px;
+}
+.echo.box .echo-type input {
+	text-align: center;
+	margin: auto;
+	display: block;
+	background: none;
+	font-size: 2em;
+	font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #FFFFFF;
+	border: 0;
+	position: relative; z-index: 1;
+}
+
+.echo.box .priority {
+	position: absolute;
+	left: 12.5%;
+	bottom: 0px;
+	z-index: 0;
+    border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0)) 1 1;
+	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,0.5), rgba(232,192,86,0));
 }
 
 /* Grid */
 .coin {
 	position: relative;
 	z-index: 1;
-	width: 85px;
-	height: 85px;
+	width: 75px;
+	height: 75px;
 	text-align: center;
 	font-size: 56px;
 	font-family: 'Mrs Sheppards', cursive;
@@ -94,25 +126,25 @@
 	border-radius: 100px;
 	border: 0;
 	background: url('images/coin.gif') center center;
-	background-size: 85px;
+	background-size: 75px;
 	margin: 6px 5px;
 }
 
 .entry {
 	background: url('images/coin-entry.gif') center center;
-	background-size: 85px;
+	background-size: 75px;
 }
 
 #main_grid {
 	position: relative;
-	width: 365px; 
+	width: 325px; 
 	margin: 30px auto;
 }
 
 #main_grid #core_number {
 	position: absolute;
-	top: 164px;
-	left: 150px;
+	top: 144px;
+	left: 130px;
 	width: 60px;
 	height: 60px;
 	font-family: 'Mrs Sheppards', cursive;
@@ -123,12 +155,18 @@
 	background: blue;
 }
 
-.box.solution {
-	width: 270px;
+
+.ss-right {
+	width: 300px;
 	position: absolute;
 	top: 50px;
 	right: 0;
 }
+
+.box.solution {
+
+}
+
 .box.solution .box-content {
 	height: 105px;
 }
