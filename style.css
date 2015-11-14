@@ -16,7 +16,7 @@
 
 /* Main section */
 #main-section {
-	height: 400px;
+	height: 450px;
 	background: #3c1f11;
 	color: #FFFFFF;
 }
@@ -39,7 +39,6 @@
 
 .box {
 	position: relative;
-	width: 300px;
 	background: url('images/options.png');
 }
 
@@ -51,29 +50,30 @@
     			-2px -2px 3px rgba(200,200,200,0.5);
 }
 
-.options {
+.box-title {
+	width: 75%;
+	margin: 0 auto 10px;
+	text-align: center;
+	border: 1px;
+    border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0)) 1 1;
+	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,1), rgba(232,192,86,0));
+	font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.ss-left {
+	width: 275px;
 	position: absolute;
 	left: 0;
 	top: 100px;
 }
 
+.ss-left .box {
+	margin-bottom: 20px;
+}
+
 .options input {
 	width: 50px;
-}
-
-.advanced-options {
-	position: absolute;
-	left: 0;
-	top: 200px;
-}
-
-.actions {
-	position: absolute;
-	left: 0;
-	top: 270px;
-}
-
-.options input, .actions button {
 	color: #000000;
 }
 
@@ -81,32 +81,32 @@
 .coin {
 	position: relative;
 	z-index: 1;
-	width: 70px;
-	height: 70px;
+	width: 85px;
+	height: 85px;
 	text-align: center;
 	font-size: 30px;
 	border-radius: 100px;
 	border: 0;
-	background: url('images/coin.gif');
-	background-size: 70px;
+	background: url('images/coin.gif') center center;
+	background-size: 85px;
 	margin: 6px 5px;
 }
 
 .entry {
-	background: url('images/coin-entry.gif');
-	background-size: 70px;
+	background: url('images/coin-entry.gif') center center;
+	background-size: 85px;
 }
 
 #main_grid {
 	position: relative;
-	width: 305px; 
+	width: 365px; 
 	margin: 30px auto;
 }
 
 #main_grid #core_number {
 	position: absolute;
-	top: 134px;
-	left: 120px;
+	top: 164px;
+	left: 150px;
 	width: 60px;
 	height: 60px;
 	text-align: center;
@@ -117,6 +117,7 @@
 }
 
 .box.solution {
+	width: 270px;
 	position: absolute;
 	top: 50px;
 	right: 0;
@@ -126,7 +127,7 @@
 }
 
 .box.solution #solution {
-	zoom: 30%;
+	zoom: 25%;
 	position: absolute;
 	top: 25px;
 	right: 55px;

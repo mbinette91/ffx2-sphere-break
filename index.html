@@ -38,6 +38,7 @@
 				</div>
 				<div class="solution box">
 					<div class="box-content">
+						<div class="box-title">Solution</div>
 						Score: <span id="score"></span><br/>
 						<div id="solution">
 							<div class="row">
@@ -68,21 +69,26 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-				<div class="options box">
-					<div class="box-content">
-						<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
-						<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
+
+				<div class="subsection ss-left">
+					<div class="options box">
+						<div class="box-content">
+							<div class="box-title">Targets</div>
+							<input type="text" id="coin_count" value="5"/> <input type="radio" name="priority" id="priority" value="coin_count" checked> Coin count ECHO<br/>
+							<input type="text" id="multiplier_echo" value="4"/> <input type="radio" name="priority" id="priority" value="multiplier_echo">  Multiplier ECHO<br/>
+						</div>
 					</div>
-				</div>
-				<div class="advanced-options box">
-					<div class="box-content">
-						<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
+
+					<div class="advanced-options box">
+						<div class="box-content">
+							<div class="box-title">Advanced options</div>
+							<input type="checkbox" id="maximize_border"/> Maximize border coin count<br/>
+						</div>
 					</div>
-				</div>
-				<div class="actions box">
-					<div class="box-content">
-						<button onclick="find()">FIND</button>
-						<button onclick="incr()">Incr</button>
+
+					<div class="actions">
+						<button class="btn btn-primary btn-block" onclick="find()">Find</button>
+						<button class="btn btn-success btn-block" onclick="incr()">Complete turn</button>
 					</div>
 				</div>
 			</div>
