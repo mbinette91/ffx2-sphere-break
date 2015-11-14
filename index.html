@@ -42,6 +42,10 @@
 						<div class="box-content">
 							<div class="box-title">Solution</div>
 							<div class="score">Score: <span id="score"></span></div>
+							<div class="echo-results">
+								<div class="coin_count"><div class="result"></div> Coin Count</div>
+								<div class="multiplier"><div class="result"></div> Multiplier</div>
+							</div>
 							<div id="solution">
 								<div class="row">
 									<input type="text" class="coin" id="grid-1-1" disabled/>
@@ -100,8 +104,8 @@
 					</div>
 
 					<div class="actions">
-						<button class="btn btn-primary btn-block" onclick="find()">Find</button>
-						<button class="btn btn-success btn-block" onclick="incr()">Complete turn</button>
+						<button class="btn btn-primary btn-block" onclick="find()">Find solution</button>
+						<button class="btn btn-success btn-block" onclick="incr()">Advance turn</button>
 					</div>
 				</div>
 			</div>

@@ -92,7 +92,7 @@ textarea:focus, input:focus { outline: 0; }
 .echo.box .echo-type .value {
 	margin-bottom: 3px;
 }
-.echo.box .echo-type input {
+.echo.box .echo-type .value {
 	text-align: center;
 	margin: auto;
 	display: block;
@@ -166,20 +166,51 @@ textarea:focus, input:focus { outline: 0; }
 }
 
 .box.solution {
-
 }
 
 .box.solution .box-content {
     text-align: center;
+	height: 126px;
 }
 
 .box.solution .score {
 	display: none;
 }
 
-.box.solution #solution {
+.box.solution .box-title {
+	width: 50%;
+	margin-left: 0;
+}
+
+.box.solution .echo-results {
+	float: left;
+	width: 180px;
 	display: inline-block;
-	zoom: 25%;
+	text-align: left;
+	line-height: 34px;
+}
+
+.box.solution .echo-results .result {
+	display: inline-block;
+	width: 16px; height: 16px;
+	position: relative;
+	top: 3px;
+	margin-right: 4px;
+	background: url('images/icon-unknown.png');
+}
+.box.solution .echo-results .success {
+	background: url('images/icon-success.png');
+}
+.box.solution .echo-results .error {
+	background: url('images/icon-error.png');
+}
+
+.box.solution #solution {
+    display: inline-block;
+    zoom: 34%;
+    position: absolute;
+    right: 45px;
+    top: 22px;
 }
 .box.solution #solution .coin {
 	font-family: 'Arial', sans-serif;

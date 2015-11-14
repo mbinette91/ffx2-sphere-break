@@ -200,6 +200,9 @@ $("input").change(function(){
 });
 
 function find() {
+    $(".echo-results .result").removeClass("success");
+    $(".echo-results .result").removeClass("error");
+
     CURRENT_MAX_SOLUTION = new Solution();
     var grid = createCurrentGrid();
     var params = {
@@ -211,6 +214,9 @@ function find() {
         maximizeNines: $('#maximize_nines').is(":checked") 
     }
 
+    if(!(params.coreNumber >= 1 && params.coreNumber <= 9))
+        return; // Nothing to do here!
+
     console.log(grid)
     console.log(params)
     console.log(grid.find(params))
@@ -221,7 +227,9 @@ function find() {
         pos += 1;
         $("#solution").find("#"+CURRENT_MAX_SOLUTION.coins[i].elem.attr('id')).val( pos )
     }
-    $("#score").html(CURRENT_MAX_SOLUTION.score(params))
+    $("#score").html(CURRENT_MAX_SOLUTION.score(params));
+    $(".echo-results .coin_count .result").addClass(CURRENT_MAX_SOLUTION.satisfyCoinCountEcho(params)? "success" : "error");
+    $(".echo-results .multiplier .result").addClass(CURRENT_MAX_SOLUTION.satisfyMultiplierEcho(params)? "success" : "error");
 }
 
 function incr() {
