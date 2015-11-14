@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Mrs+Sheppards);
 
 .clear { clear:both; }
+textarea:focus, input:focus { outline: 0; }
 
 .section {
 	clear: both;
@@ -169,17 +170,26 @@
 }
 
 .box.solution .box-content {
-	height: 105px;
+    text-align: center;
+}
+
+.box.solution .score {
+	display: none;
 }
 
 .box.solution #solution {
+	display: inline-block;
 	zoom: 25%;
-	position: absolute;
-	top: 25px;
-	right: 55px;
 }
 .box.solution #solution .coin {
 	font-family: 'Arial', sans-serif;
+}
+
+.box.advanced-options label {
+	margin: 0; 
+	font-weight: normal; 
+	position: relative;
+	bottom: 2px;
 }
 
 /* What section */
