@@ -23,7 +23,8 @@ input[type="number"] {
 	margin: auto;
 }
 
-.section-content h2 {
+.section-content h2,
+.section-content h3 {
 	text-align: center;
 }
 
@@ -269,9 +270,14 @@ input[type="number"] {
 
 #what-section {
 	border-top: 1px solid #333;
-	height: 300px;
 	background: #f6f5f6;
 	border-bottom: 1px solid #D3CECA;
+	padding-bottom: 20px;
+}
+
+#what-section blockquote, #what-section p {
+	font-size: 15px;
+	padding: 10px 20px;
 }
 
 /* FAQ section */
