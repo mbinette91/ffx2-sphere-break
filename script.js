@@ -166,7 +166,8 @@ Solution.prototype.score = function(config) {
     if(this.satisfySecondaryCondition(config))
         bonus = 1000; // This wins.
 
-    bonus += 5.1 * this.getNumberOf(9); // Some advantages to 9s being played. But not much.
+    if(config.maximizeNines)
+        bonus += 5.1 * this.getNumberOf(9); // Some advantages to 9s being played. But not much compared to everything else.
 
     if(quotaBonus != 0)
         return (score * quotaBonus) + bonus; // Even make a 0 score solution win over everything else
@@ -206,13 +207,14 @@ function find() {
         coinCount: parseInt($("#coin_count").val()),
         multiplierEcho: parseInt($("#multiplier_echo").val()),
         priority: $("[name=priority]:checked").val(),
-        maximizeBorder: $('#maximize_border').is(":checked")
+        maximizeBorder: $('#maximize_border').is(":checked"),
+        maximizeNines: $('#maximize_nines').is(":checked") 
     }
 
     console.log(grid)
     console.log(params)
     console.log(grid.find(params))
-    
+
     pos = 0;
     $("#solution .coin").val("");
     for(var i in CURRENT_MAX_SOLUTION.coins) {
