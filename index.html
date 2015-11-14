@@ -1,186 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>FFX2 Sphere Break Tool</title>
-		<link rel="shortcut icon" type="image/png" href="favicon.png"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-	</head>
-	<body>
-		<div id="main-section" class="section">
-			<div class="section-content">
-				<div id="logo">Sphere Break</div>
-				<div id="main_grid">
-					<div class="row">
-						<input type="text" class="coin" id="grid-1-1" tabindex="10"/>
-						<input type="text" class="coin" id="grid-1-2" tabindex="10"/>
-						<input type="text" class="coin" id="grid-1-3" tabindex="10"/>
-						<input type="text" class="coin" id="grid-1-4" tabindex="10"/>
-					</div>
-					<div class="row">
-						<input type="text" class="coin" id="grid-2-1" tabindex="10"/>
-						<input type="text" class="entry coin" value="?" id="grid-2-2" tabindex="10"/>
-						<input type="text" class="entry coin" value="?" id="grid-2-3" tabindex="10"/>
-						<input type="text" class="coin" id="grid-2-4" tabindex="10"/>
-					</div>
-					<div class="row">
-						<input type="text" class="coin" id="grid-3-1" tabindex="10"/>
-						<input type="text" class="entry coin" value="?" id="grid-3-2" tabindex="10"/>
-						<input type="text" class="entry coin" value="?" id="grid-3-3" tabindex="10"/>
-						<input type="text" class="coin" id="grid-3-4" tabindex="10"/>
-					</div>
-					<div class="row">
-						<input type="text" class="coin" id="grid-4-1" tabindex="10"/>
-						<input type="text" class="coin" id="grid-4-2" tabindex="10"/>
-						<input type="text" class="coin" id="grid-4-3" tabindex="10"/>
-						<input type="text" class="coin" id="grid-4-4" tabindex="10"/>
-					</div>
-					<input type="text" id="core_number" value="?" tabindex="11" data-toggle="tooltip" data-placement="top" title="Enter your core number here"/>
-				</div>
+  <head>
+    <meta charset="UTF-8">
+    <title>FFX2 Sphere Break Tool</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="main-section" class="section">
+      <div class="section-content">
+        <div id="logo">Sphere Break</div>
+        <div id="main_grid">
+          <div class="row">
+            <input type="text" class="coin" id="grid-1-1" tabindex="10"/>
+            <input type="text" class="coin" id="grid-1-2" tabindex="10"/>
+            <input type="text" class="coin" id="grid-1-3" tabindex="10"/>
+            <input type="text" class="coin" id="grid-1-4" tabindex="10"/>
+          </div>
+          <div class="row">
+            <input type="text" class="coin" id="grid-2-1" tabindex="10"/>
+            <input type="text" class="entry coin" value="?" id="grid-2-2" tabindex="10"/>
+            <input type="text" class="entry coin" value="?" id="grid-2-3" tabindex="10"/>
+            <input type="text" class="coin" id="grid-2-4" tabindex="10"/>
+          </div>
+          <div class="row">
+            <input type="text" class="coin" id="grid-3-1" tabindex="10"/>
+            <input type="text" class="entry coin" value="?" id="grid-3-2" tabindex="10"/>
+            <input type="text" class="entry coin" value="?" id="grid-3-3" tabindex="10"/>
+            <input type="text" class="coin" id="grid-3-4" tabindex="10"/>
+          </div>
+          <div class="row">
+            <input type="text" class="coin" id="grid-4-1" tabindex="10"/>
+            <input type="text" class="coin" id="grid-4-2" tabindex="10"/>
+            <input type="text" class="coin" id="grid-4-3" tabindex="10"/>
+            <input type="text" class="coin" id="grid-4-4" tabindex="10"/>
+          </div>
+          <input type="text" id="core_number" value="?" tabindex="11" data-toggle="tooltip" data-placement="top" title="Enter your core number here"/>
+        </div>
 
-				<div class="subsection ss-right">
-					<div class="solution box">
-						<div class="box-content" data-toggle="tooltip" data-placement="left" title="This is the best solution found by the algorithm. Make sure to input it in the right order.">
-							<div class="box-title">Solution</div>
-							<div class="score">Score: <span id="score"></span></div>
-							<div class="echo-results">
-								<div class="coin_count"><div class="result"></div> Coin Count</div>
-								<div class="multiplier"><div class="result"></div> Multiplier</div>
-							</div>
-							<div id="solution">
-								<div class="row">
-									<input type="text" class="coin" id="grid-1-1" disabled/>
-									<input type="text" class="coin" id="grid-1-2" disabled/>
-									<input type="text" class="coin" id="grid-1-3" disabled/>
-									<input type="text" class="coin" id="grid-1-4" disabled/>
-								</div>
-								<div class="row">
-									<input type="text" class="coin" id="grid-2-1" disabled/>
-									<input type="text" class="entry coin" id="grid-2-2" disabled/>
-									<input type="text" class="entry coin" id="grid-2-3" disabled/>
-									<input type="text" class="coin" id="grid-2-4" disabled/>
-								</div>
-								<div class="row">
-									<input type="text" class="coin" id="grid-3-1" disabled/>
-									<input type="text" class="entry coin" id="grid-3-2" disabled/>
-									<input type="text" class="entry coin" id="grid-3-3" disabled/>
-									<input type="text" class="coin" id="grid-3-4" disabled/>
-								</div>
-								<div class="row">
-									<input type="text" class="coin" id="grid-4-1" disabled/>
-									<input type="text" class="coin" id="grid-4-2" disabled/>
-									<input type="text" class="coin" id="grid-4-3" disabled/>
-									<input type="text" class="coin" id="grid-4-4" disabled/>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div>
+        <div class="subsection ss-right">
+          <div class="solution box">
+            <div class="box-content" data-toggle="tooltip" data-placement="left" title="This is the best solution found by the algorithm. Make sure to input it in the right order.">
+              <div class="box-title">Solution</div>
+              <div class="score">Score: <span id="score"></span></div>
+              <div class="echo-results">
+                <div class="coin_count"><div class="result"></div> Coin Count</div>
+                <div class="multiplier"><div class="result"></div> Multiplier</div>
+              </div>
+              <div id="solution">
+                <div class="row">
+                  <input type="text" class="coin" id="grid-1-1" disabled/>
+                  <input type="text" class="coin" id="grid-1-2" disabled/>
+                  <input type="text" class="coin" id="grid-1-3" disabled/>
+                  <input type="text" class="coin" id="grid-1-4" disabled/>
+                </div>
+                <div class="row">
+                  <input type="text" class="coin" id="grid-2-1" disabled/>
+                  <input type="text" class="entry coin" id="grid-2-2" disabled/>
+                  <input type="text" class="entry coin" id="grid-2-3" disabled/>
+                  <input type="text" class="coin" id="grid-2-4" disabled/>
+                </div>
+                <div class="row">
+                  <input type="text" class="coin" id="grid-3-1" disabled/>
+                  <input type="text" class="entry coin" id="grid-3-2" disabled/>
+                  <input type="text" class="entry coin" id="grid-3-3" disabled/>
+                  <input type="text" class="coin" id="grid-3-4" disabled/>
+                </div>
+                <div class="row">
+                  <input type="text" class="coin" id="grid-4-1" disabled/>
+                  <input type="text" class="coin" id="grid-4-2" disabled/>
+                  <input type="text" class="coin" id="grid-4-3" disabled/>
+                  <input type="text" class="coin" id="grid-4-4" disabled/>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
 
-					<div class="advanced-options box">
-						<div class="box-content">
-							<div class="box-title">Advanced options</div>
-							<div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that have more border coins">
-								<input type="checkbox" id="maximize_border" checked/> <label for="maximize_border">Maximize border coin count</label>
-							</div>
-							<div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that use up (9)s">
-								<input type="checkbox" id="maximize_nines" checked/> <label for="maximize_nines">Maximize the number of (9)s played</label>
-							</div>
-						</div>
-					</div>
-				</div>
+          <div class="advanced-options box">
+            <div class="box-content">
+              <div class="box-title">Advanced options</div>
+              <div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that have more border coins">
+                <input type="checkbox" id="maximize_border" checked/> <label for="maximize_border">Maximize border coin count</label>
+              </div>
+              <div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that use up (9)s">
+                <input type="checkbox" id="maximize_nines" checked/> <label for="maximize_nines">Maximize the number of (9)s played</label>
+              </div>
+            </div>
+          </div>
+        </div>
 
-				<div class="subsection ss-left">
-					<div class="echo box">
-						<div class="box-content">
-							<div class="box-title">Echo targets</div>
-							<div class="echo-type">
-								<div class="name"><label for="priority_coin_count">Coin Count</label></div>
-								<input type="number" id="coin_count" class="value" value="5" max="6" tabindex="1"/>
-							</div>
-							<div class="echo-type">
-								<div class="name"><label for="priority_multiplier">Multiplier</label></div>
-								<input type="number" id="multiplier_echo" class="value" value="4" max="99" tabindex="1"/>
-							</div>
-							<div class="priority" data-toggle="tooltip" data-placement="bottom" title="If the algorithm cannot find a solution that satisfies both multipliers, which one should it prioritize?">
-								<div class="box-title">Priority</div>
-								<input type="radio" name="priority" id="priority_coin_count" value="coin_count" tabindex="2" checked/>
-								<input type="radio" name="priority" id="priority_multiplier" value="multiplier_echo" tabindex="2"/> 
-							</div>
-						</div>
-					</div>
+        <div class="subsection ss-left">
+          <div class="echo box">
+            <div class="box-content">
+              <div class="box-title">Echo targets</div>
+              <div class="echo-type">
+                <div class="name"><label for="priority_coin_count">Coin Count</label></div>
+                <input type="number" id="coin_count" class="value" value="5" max="6" tabindex="1"/>
+              </div>
+              <div class="echo-type">
+                <div class="name"><label for="priority_multiplier">Multiplier</label></div>
+                <input type="number" id="multiplier_echo" class="value" value="4" max="99" tabindex="1"/>
+              </div>
+              <div class="priority" data-toggle="tooltip" data-placement="bottom" title="If the algorithm cannot find a solution that satisfies both multipliers, which one should it prioritize?">
+                <div class="box-title">Priority</div>
+                <input type="radio" name="priority" id="priority_coin_count" value="coin_count" tabindex="2" checked/>
+                <input type="radio" name="priority" id="priority_multiplier" value="multiplier_echo" tabindex="2"/> 
+              </div>
+            </div>
+          </div>
 
-					<div class="actions">
-						<button class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="bottom" title="Update the 'Solution' box" onclick="find()">Find solution</button>
-						<button class="btn btn-success btn-block" data-toggle="tooltip" data-placement="top" title="Increments all border coins by 1" onclick="incr()">Advance turn</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="what-section" class="section">
-			<div class="section-content">
-				<h2>What is this?</h2>
-				<p class="">
-					This tool was developed after many frustrating hours trying to beat the <a href="http://finalfantasy.wikia.com/wiki/Sphere_Break#Sphere_Break_Elites">Sphere Break Elites</a>. Let me be clear - it will <strong>not</strong> guarantee you a victory every time you play, as some luck is needed against some opponents (especially the Elites, where a random core-1 in the middle of the game will annihilate your chances of a victory). However, it will allow you to quickly explore solutions that can keep your Echo streaks alive. 
-				</p>
+          <div class="actions">
+            <button class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="bottom" title="Update the 'Solution' box" onclick="find()">Find solution</button>
+            <button class="btn btn-success btn-block" data-toggle="tooltip" data-placement="top" title="Increments all border coins by 1" onclick="incr()">Advance turn</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="what-section" class="section">
+      <div class="section-content">
+        <h2>What is this?</h2>
+        <p class="">
+          This tool was developed after many frustrating hours trying to beat the <a href="http://finalfantasy.wikia.com/wiki/Sphere_Break#Sphere_Break_Elites">Sphere Break Elites</a>. Let me be clear - it will <strong>not</strong> guarantee you a victory every time you play, as some luck is needed against some opponents (especially the Elites, where a random core-1 in the middle of the game will annihilate your chances of a victory). However, it will allow you to quickly explore solutions that can keep your Echo streaks alive. 
+        </p>
 
-				<div class="separator"></div>
+        <div class="separator"></div>
 
-				<h3>Sphere Break?</h3>
-				<blockquote>
-					<p>
-						Sphere break is a mini-game in FFX-2, just like card games in the past FFs.
-						Basically, Sphere break is a game that's all about sums and multiplications.
-						Instead of following the old system of card games, in which you can win easily if
-						you have got some rare cards in your hand. This requires you to use a little brains.
-						Sphere break is a race against the clock to create multiples of the core sphere's
-						core number by combining numbers of the 16 coins on the board. Confusing? Well,
-						like Shinra said, "Once you get the elementary, you will get the hang of it."
-					</p>
-	  				<footer><cite title="Source Title">Sakuracream</cite> from <a href="http://www.gamefaqs.com/ps2/562386-final-fantasy-x-2/faqs/27071">GameFAQs.com</a></footer>
-				</blockquote>
-			</div>
-		</div>
-		<div id="faq-section" class="section">
-			<div class="section-content">
-				<h2>Frequently Asked Questions</h2>
-				<h3>How do I choose the Echo targets? <small>(and other options)</small></h3>
-				<p>
-					I have set what I believe to be good targets as defaults, so you don't <strong>need</strong> to change them. If you want to toy with them, just know that I've caped the <em>Coin Count Echo</em> value to 6 because the algorithm I am using becomes very slow starting at 6. If you are a developer and want to contribute, feel free to <a href="https://github.com/mbinette91/ffx2-sphere-break/issues/1">implement a better algorithm</a>.
-				</p>
-				<p>
-					The same advice applies to the <em>Advanced options</em> box. The only one I would consider toying with is the <em>Maximize border coin count</em> option: turn it off when you feel you will be running out of border coins soon (rule of thumb: &lt; 30% left).
-				</p>
+        <h3>Sphere Break?</h3>
+        <blockquote>
+          <p>
+            Sphere break is a mini-game in FFX-2, just like card games in the past FFs.
+            Basically, Sphere break is a game that's all about sums and multiplications.
+            Instead of following the old system of card games, in which you can win easily if
+            you have got some rare cards in your hand. This requires you to use a little brains.
+            Sphere break is a race against the clock to create multiples of the core sphere's
+            core number by combining numbers of the 16 coins on the board. Confusing? Well,
+            like Shinra said, "Once you get the elementary, you will get the hang of it."
+          </p>
+          <footer><cite title="Source Title">Sakuracream</cite> from <a href="http://www.gamefaqs.com/ps2/562386-final-fantasy-x-2/faqs/27071">GameFAQs.com</a></footer>
+        </blockquote>
+      </div>
+    </div>
+    <div id="faq-section" class="section">
+      <div class="section-content">
+        <h2>Frequently Asked Questions</h2>
+        <h3>How do I choose the Echo targets? <small>(and other options)</small></h3>
+        <p>
+          I have set what I believe to be good targets as defaults, so you don't <strong>need</strong> to change them. If you want to toy with them, just know that I've caped the <em>Coin Count Echo</em> value to 6 because the algorithm I am using becomes very slow starting at 6. If you are a developer and want to contribute, feel free to <a href="https://github.com/mbinette91/ffx2-sphere-break/issues/1">implement a better algorithm</a>.
+        </p>
+        <p>
+          The same advice applies to the <em>Advanced options</em> box. The only one I would consider toying with is the <em>Maximize border coin count</em> option: turn it off when you feel you will be running out of border coins soon (rule of thumb: &lt; 30% left).
+        </p>
 
-				<div class="separator"></div>
+        <div class="separator"></div>
 
-				<h3>I cannot beat the Sphere Break Elites!</h3>
-				<p>
-					Don't give up! A fair amount of luck is needed, even with this tool, to beat the Elites. The only way to beat those opponents is to build very long Echo streaks and an Echo-destroying core number (e.g. 1) between turns 12-18 almost always means you are going to lose the game. 
-				</p>
-				<p>
-					I've beaten all three of them using the default settings that I've set above, and playing with the <em>Maximize border coin count</em> option when I felt I was running low on border coins. I also recommend using both the <em>Coin Count Echo</em> and the <em>Multiplier Echo</em>. You probably won't be able to keep both alive for very long, but every point counts.
-				</p>
+        <h3>I cannot beat the Sphere Break Elites!</h3>
+        <p>
+          Don't give up! A fair amount of luck is needed, even with this tool, to beat the Elites. The only way to beat those opponents is to build very long Echo streaks and an Echo-destroying core number (e.g. 1) between turns 12-18 almost always means you are going to lose the game. 
+        </p>
+        <p>
+          I've beaten all three of them using the default settings that I've set above, and playing with the <em>Maximize border coin count</em> option when I felt I was running low on border coins. I also recommend using both the <em>Coin Count Echo</em> and the <em>Multiplier Echo</em>. You probably won't be able to keep both alive for very long, but every point counts.
+        </p>
 
-				<div class="separator"></div>
+        <div class="separator"></div>
 
-				<h3>Can you add [...] to your algorithm?</h3>
-				<p>
-					No, but you are free to do it! Just fork the <a href="https://github.com/mbinette91/ffx2-sphere-break">project</a> and open a PR if you feel it would benefit everyone!
-				</p>
-			</div>
-		</div>
-		<div id="footer-section" class="section">
-			<div class="section-content">
-				This website is not affiliated with the Final Fantasy franchise
-			</div>
-		</div>
-		<a href="https://github.com/mbinette91/ffx2-sphere-break"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
-	</body>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/utils.js"></script>
-	<script src="js/script.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-28781654-4', 'auto');ga('send', 'pageview');</script>
+        <h3>Can you add [...] to your algorithm?</h3>
+        <p>
+          No, but you are free to do it! Just fork the <a href="https://github.com/mbinette91/ffx2-sphere-break">project</a> and open a PR if you feel it would benefit everyone!
+        </p>
+      </div>
+    </div>
+    <div id="footer-section" class="section">
+      <div class="section-content">
+        This website is not affiliated with the Final Fantasy franchise
+      </div>
+    </div>
+    <a href="https://github.com/mbinette91/ffx2-sphere-break"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png"></a>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-28781654-4', 'auto');ga('send', 'pageview');</script>
 </html>
