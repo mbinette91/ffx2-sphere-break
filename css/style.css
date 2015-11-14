@@ -1,308 +1,68 @@
-@import url(https://fonts.googleapis.com/css?family=Mrs+Sheppards);
+@import url('main-section.css');
 
+/* Utils */
 .clear { clear:both; }
 textarea:focus, input:focus { outline: 0; }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
+/* Section (general) */
 .section {
-	clear: both;
+  clear: both;
 }
 
 .section-content {
-	width: 1000px;
-	padding: 1px;
-	margin: auto;
+  position: relative;
+  width: 1000px;
+  padding: 1px;
+  margin: auto;
 }
 
 .section-content h2,
 .section-content h3 {
-	text-align: center;
-}
-
-/* Main section */
-#main-section {
-	height: 405px;
-	background: url('../images/background-main.jpg') rgb(45,22,6);
-	color: #FFFFFF;
-}
-
-#main-section .section-content {
-	position: relative;
-}
-
-#logo {
-	font-family: 'Mrs Sheppards', cursive;
-    font-size: 50px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	position: absolute;
-	top: 0; left: 0;
-	width: 300px;
-	height: 200px;
-	background: url('../images/logo.png') center -20px no-repeat;
-	background-size: 180px;
-	text-align: center;
-	line-height: 170px;
-}
-
-.box {
-	padding: 3px;
-	position: relative;
-	background: url('../images/options.png');
-	margin-bottom: 20px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.box-content {
-	padding: 10px;
-	border: 1px solid rgba(30, 30, 30, 0.5);
-    box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
-    			-2px -2px 3px rgba(200,200,200,0.5);
-}
-
-.box-title {
-	width: 75%;
-	margin: 0 auto 10px;
-	text-align: center;
-	border: 1px;
-    border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1), rgba(255,255,255,0)) 1 1;
-	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,1), rgba(232,192,86,0));
-	font-weight: bold;
-}
-
-.ss-left {
-	width: 300px;
-	position: absolute;
-	left: 0;
-	top: 140px;
-}
-
-.echo.box input {
-	width: 50px;
-	color: #000000;
-}
-
-.echo.box .echo-type {
-	font-weight: bold;
-	text-align: center;
-	width: 49%;
-	display: inline-block;
-	position: relative;
-    z-index: 1;
-    margin-bottom: 20px;
-}
-.echo.box .echo-type label {
-	margin-bottom: 0;
-}
-
-.echo.box .echo-type .value {
-	margin-bottom: 3px;
-}
-.echo.box .echo-type .value {
-	text-align: center;
-	margin: auto;
-	display: block;
-	background: none;
-	font-size: 2em;
-	font-weight: bold;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	color: #FFFFFF;
-	border: 0;
-	position: relative; 
-	z-index: 1;
-}
-
-.echo.box .priority {
-	position: absolute;
-	bottom: 17px;
-	width: 90%;
-}
-.echo.box .priority .box-title {
-	position: absolute;
-	left: 12.5%;
-	z-index: 0;
-	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0)) 1 1;
-	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,0.5), rgba(232,192,86,0));
-}
-
-.echo.box .priority input {
-	position: relative;
-	top: 1px;
-	z-index: 1;
-	width: 50%;
-	float: left;
-}
-
-.actions button{
-	margin-top: 5px;
-}
-
-/* Grid */
-.coin {
-	position: relative;
-	z-index: 1;
-	width: 75px;
-	height: 75px;
-	text-align: center;
-	font-size: 56px;
-	font-family: 'Mrs Sheppards', cursive;
-	color: rgba(255,255,255,0.8);
-	border-radius: 100px;
-	border: 0;
-	background: url('../images/coin.gif') center center;
-	background-size: 75px;
-	margin: 6px 5px;
-}
-
-.entry {
-	background: url('../images/coin-entry.gif') center center;
-	background-size: 75px;
-}
-
-#main_grid {
-	position: relative;
-	width: 325px; 
-	margin: 30px auto;
-}
-
-#main_grid #core_number {
-	position: absolute;
-	top: 134px;
-	left: 120px;
-	width: 80px;
-	height: 80px;
-	font-family: 'Mrs Sheppards', cursive;
-	font-size: 60px;
-	text-align: center;
-	border-radius: 100px;
-	border: 0;
-	background: url('../images/sphere.png') center center no-repeat;
-	background-size: 85px;
-    box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
-    			-2px -2px 3px rgba(200,200,200,0.5);
-    z-index: 2;
-}
-
-
-.ss-right {
-	width: 300px;
-	position: absolute;
-	top: 50px;
-	right: 0;
-}
-
-.box.solution {
-}
-
-.box.solution .box-content {
-    text-align: center;
-	height: 126px;
-}
-
-.box.solution .score {
-	display: none;
-}
-
-.box.solution .box-title {
-	width: 50%;
-	margin-left: 0;
-}
-
-.box.solution .echo-results {
-	float: left;
-	width: 180px;
-	display: inline-block;
-	text-align: left;
-	line-height: 34px;
-}
-
-.box.solution .echo-results .result {
-	display: inline-block;
-	width: 16px; height: 16px;
-	position: relative;
-	top: 3px;
-	margin-right: 4px;
-	background: url('../images/icon-unknown.png');
-}
-.box.solution .echo-results .success {
-	background: url('../images/icon-success.png');
-}
-.box.solution .echo-results .error {
-	background: url('../images/icon-error.png');
-}
-
-.box.solution #solution {
-    display: inline-block;
-    zoom: 34%;
-    position: absolute;
-    right: 45px;
-    top: 22px;
-}
-.box.solution #solution .coin {
-	font-family: 'Arial', sans-serif;
-}
-
-.box.solution .tooltip {
-	width: 160px;
-	margin-left: 160px;
-	margin-top: 16px;
-}
-
-.box.advanced-options label {
-	margin: 0; 
-	font-weight: normal; 
-	position: relative;
-	bottom: 2px;
+  text-align: center;
 }
 
 .separator {
-	width: 100%;
-	height: 50px;
-	background: url('../images/separator.png') center 30px no-repeat;
-	background-size: 250px;
+  width: 100%;
+  height: 50px;
+  background: url('../images/separator.png') center 30px no-repeat;
+  background-size: 250px;
 }
+
+/* Main section */
+/* - See main-section.css */
 
 /* What section */
-#main-section {
-	border-bottom: 1px solid #D3CECA;
-	padding-bottom: 20px;
-}
-
 #what-section {
-	border-top: 1px solid #333;
-	background: #f6f5f6;
-	border-bottom: 1px solid #D3CECA;
-}
-
-#what-section blockquote, #what-section p,
-#faq-section p {
-	text-align: justify;
-	font-size: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
+  border-top: 1px solid #333;
+  background: #f6f5f6;
+  border-bottom: 1px solid #D3CECA;
 }
 
 /* FAQ section */
 #faq-section {
-	border-top: 1px solid #f6f5f6;
-	background: #D3CECA;
-	border-bottom: 1px solid #f6f5f6;
-	padding-bottom: 20px;
+  border-top: 1px solid #f6f5f6;
+  background: #D3CECA;
+  border-bottom: 1px solid #f6f5f6;
+  padding-bottom: 20px;
 }
 
 /* FAQ section */
 #footer-section {
-	border-top: 1px solid #D3CECA;
-	background: #f6f5f6;
-	color: #000000;
-	text-align: center;
-	line-height: 40px;
+  border-top: 1px solid #D3CECA;
+  background: #f6f5f6;
+  color: #000000;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* Text format */
+#what-section blockquote, 
+#what-section p,
+#faq-section p {
+  text-align: justify;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
