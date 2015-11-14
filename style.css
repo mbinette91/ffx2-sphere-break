@@ -86,7 +86,7 @@ textarea:focus, input:focus { outline: 0; }
 	display: inline-block;
 }
 .echo.box .echo-type label {
-	margin-bottom: 0;
+	margin-bottom: 5px;
 }
 
 .echo.box .echo-type .value {
