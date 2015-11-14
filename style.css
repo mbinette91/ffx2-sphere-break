@@ -3,6 +3,16 @@
 .clear { clear:both; }
 textarea:focus, input:focus { outline: 0; }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .section {
 	clear: both;
 }
@@ -147,17 +157,20 @@ textarea:focus, input:focus { outline: 0; }
 
 #main_grid #core_number {
 	position: absolute;
-	top: 144px;
-	left: 130px;
-	width: 60px;
-	height: 60px;
+	top: 134px;
+	left: 120px;
+	width: 80px;
+	height: 80px;
 	font-family: 'Mrs Sheppards', cursive;
-	font-size: 50px;
+	font-size: 60px;
 	text-align: center;
 	border-radius: 100px;
 	border: 0;
 	background: url('images/sphere.png') center center no-repeat;
-	background-size: 62px;
+	background-size: 85px;
+    box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
+    			-2px -2px 3px rgba(200,200,200,0.5);
+    z-index: 2;
 }
 
 

@@ -11,30 +11,30 @@
 				<div id="logo">Sphere Break</div>
 				<div id="main_grid">
 					<div class="row">
-						<input type="text" class="coin" id="grid-1-1" tabindex="1"/>
-						<input type="text" class="coin" id="grid-1-2" tabindex="1"/>
-						<input type="text" class="coin" id="grid-1-3" tabindex="1"/>
-						<input type="text" class="coin" id="grid-1-4" tabindex="1"/>
+						<input type="text" class="coin" id="grid-1-1" tabindex="10"/>
+						<input type="text" class="coin" id="grid-1-2" tabindex="10"/>
+						<input type="text" class="coin" id="grid-1-3" tabindex="10"/>
+						<input type="text" class="coin" id="grid-1-4" tabindex="10"/>
 					</div>
 					<div class="row">
-						<input type="text" class="coin" id="grid-2-1" tabindex="1"/>
-						<input type="text" class="entry coin" value="?" id="grid-2-2" tabindex="1"/>
-						<input type="text" class="entry coin" value="?" id="grid-2-3" tabindex="1"/>
-						<input type="text" class="coin" id="grid-2-4" tabindex="1"/>
-					</div>
-					<input type="text" id="core_number" value="?" tabindex="2"/>
-					<div class="row">
-						<input type="text" class="coin" id="grid-3-1" tabindex="1"/>
-						<input type="text" class="entry coin" value="?" id="grid-3-2" tabindex="1"/>
-						<input type="text" class="entry coin" value="?" id="grid-3-3" tabindex="1"/>
-						<input type="text" class="coin" id="grid-3-4" tabindex="1"/>
+						<input type="text" class="coin" id="grid-2-1" tabindex="10"/>
+						<input type="text" class="entry coin" value="?" id="grid-2-2" tabindex="10"/>
+						<input type="text" class="entry coin" value="?" id="grid-2-3" tabindex="10"/>
+						<input type="text" class="coin" id="grid-2-4" tabindex="10"/>
 					</div>
 					<div class="row">
-						<input type="text" class="coin" id="grid-4-1" tabindex="1"/>
-						<input type="text" class="coin" id="grid-4-2" tabindex="1"/>
-						<input type="text" class="coin" id="grid-4-3" tabindex="1"/>
-						<input type="text" class="coin" id="grid-4-4" tabindex="1"/>
+						<input type="text" class="coin" id="grid-3-1" tabindex="10"/>
+						<input type="text" class="entry coin" value="?" id="grid-3-2" tabindex="10"/>
+						<input type="text" class="entry coin" value="?" id="grid-3-3" tabindex="10"/>
+						<input type="text" class="coin" id="grid-3-4" tabindex="10"/>
 					</div>
+					<div class="row">
+						<input type="text" class="coin" id="grid-4-1" tabindex="10"/>
+						<input type="text" class="coin" id="grid-4-2" tabindex="10"/>
+						<input type="text" class="coin" id="grid-4-3" tabindex="10"/>
+						<input type="text" class="coin" id="grid-4-4" tabindex="10"/>
+					</div>
+					<input type="text" id="core_number" value="?" tabindex="11"/>
 				</div>
 
 				<div class="subsection ss-right">
@@ -91,13 +91,13 @@
 							<div class="box-title">Echo targets</div>
 							<div class="echo-type">
 								<div class="name"><label for="priority_coin_count">Coin Count</label></div>
-								<input type="text" id="coin_count" class="value" value="5"/>
-								<input type="radio" name="priority" id="priority_coin_count" value="coin_count" checked>
+								<input type="number" id="coin_count" class="value" value="5" max="6" tabindex="1"/>
+								<input type="radio" name="priority" id="priority_coin_count" value="coin_count" tabindex="2" checked/>
 							</div>
 							<div class="echo-type">
 								<div class="name"><label for="priority_multiplier">Multiplier</label></div>
-								<input type="text" id="multiplier_echo" class="value" value="4"/>
-								<input type="radio" name="priority" id="priority_multiplier" value="multiplier_echo"> 
+								<input type="number" id="multiplier_echo" class="value" value="4" max="99" tabindex="1"/>
+								<input type="radio" name="priority" id="priority_multiplier" value="multiplier_echo" tabindex="2"/> 
 							</div>
 							<div class="box-title priority">Priority</div>
 						</div>
