@@ -19,7 +19,7 @@
 /* Main section */
 #main-section {
 	height: 405px;
-	background: url('images/background-main.jpg') #3c1f11;
+	background: url('images/background-main.jpg') rgb(45,22,6);
 	color: #FFFFFF;
 }
 
@@ -183,21 +183,30 @@
 }
 
 /* What section */
+#main-section {
+	border-bottom: 1px solid #D3CECA;
+}
+
 #what-section {
+	border-top: 1px solid #333;
 	height: 300px;
-	background: #000000;
-	color: #FFFFFF;
+	background: #f6f5f6;
+	border-bottom: 1px solid #D3CECA;
 }
 
 /* FAQ section */
 #faq-section {
+	border-top: 1px solid #f6f5f6;
 	height: 300px;
-	background: #f9f0eb;
+	background: #D3CECA;
+	border-bottom: 1px solid #f6f5f6;
 }
 
 /* FAQ section */
 #footer-section {
-	background: #333333;
-	color: #FFFFFF;
+	border-top: 1px solid #D3CECA;
+	background: #f6f5f6;
+	color: #000000;
 	text-align: center;
+	line-height: 40px;
 }
