@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Mrs+Sheppards);
+
 .clear { clear:both; }
 
 .section {
@@ -26,15 +28,17 @@
 }
 
 #logo {
+	font-family: 'Mrs Sheppards', cursive;
+    font-size: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	position: absolute;
 	top: 0; left: 0;
-	width: 300px;
+	width: 275px;
 	height: 200px;
-	background: url('images/logo.png') center center no-repeat;
+	background: url('images/logo.png') center -30px no-repeat;
 	background-size: 180px;
 	text-align: center;
-	line-height: 100px;
-	font-weight: bold;
+	line-height: 150px;
 }
 
 .box {
@@ -65,7 +69,7 @@
 	width: 275px;
 	position: absolute;
 	left: 0;
-	top: 100px;
+	top: 110px;
 }
 
 .ss-left .box {
@@ -84,7 +88,9 @@
 	width: 85px;
 	height: 85px;
 	text-align: center;
-	font-size: 30px;
+	font-size: 56px;
+	font-family: 'Mrs Sheppards', cursive;
+	color: rgba(255,255,255,0.8);
 	border-radius: 100px;
 	border: 0;
 	background: url('images/coin.gif') center center;
@@ -109,8 +115,9 @@
 	left: 150px;
 	width: 60px;
 	height: 60px;
+	font-family: 'Mrs Sheppards', cursive;
+	font-size: 50px;
 	text-align: center;
-	font-size: 20px;
 	border-radius: 100px;
 	border: 0;
 	background: blue;
@@ -131,6 +138,9 @@
 	position: absolute;
 	top: 25px;
 	right: 55px;
+}
+.box.solution #solution .coin {
+	font-family: 'Arial', sans-serif;
 }
 
 /* What section */
