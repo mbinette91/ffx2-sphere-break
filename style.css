@@ -19,7 +19,7 @@
 /* Main section */
 #main-section {
 	height: 405px;
-	background: #3c1f11;
+	background: url('images/background-main.jpg') #3c1f11;
 	color: #FFFFFF;
 }
 
@@ -152,7 +152,8 @@
 	text-align: center;
 	border-radius: 100px;
 	border: 0;
-	background: blue;
+	background: url('images/sphere.png') center center no-repeat;
+	background-size: 62px;
 }
 
 
