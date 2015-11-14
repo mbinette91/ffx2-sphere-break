@@ -122,7 +122,10 @@
 				<p class="">
 					This website was developed after many frustrating hours trying to beat the <a href="http://finalfantasy.wikia.com/wiki/Sphere_Break#Sphere_Break_Elites">Sphere Break Elites</a>. Let me be clear - it will <strong>not</strong> guarantee you a victory everytime you play, as some luck is needed against some opponents (especially the Elites, where a random core-1 in the middle of the game will annihilate your chances of a victory). However, it will allow you to quickly explore solutions that can keep your Echo streaks alive. 
 				</p>
-				<h3>... Sphere Break?</h3>
+
+				<div class="separator"></div>
+
+				<h3>Sphere Break?</h3>
 				<blockquote>
 					<p>
 						Sphere break is a mini-game in FFX-2, just like card games in the past FFs.
@@ -139,7 +142,31 @@
 		</div>
 		<div id="faq-section" class="section">
 			<div class="section-content">
-				<h2>FAQ <small>(Frequently asked questions)</small></h2>
+				<h2>Frequently Asked Questions</h2>
+				<h3>How do I choose the Echo targets? <small>(and other options)</small></h3>
+				<p>
+					I have set what I believe to be good targets as defaults, so you don't <strong>need</strong> to change them. If you want to toy with them, just know that I've caped the <em>Coin Count Echo</em> value to 6 because the algorithm I am using becomes very slow starting at 6. If you are a developer and want to contribute, feel free to <a href="https://github.com/mbinette91/ffx2-sphere-break/issues/1">implement a better algorithm</a>.
+				</p>
+				<p>
+					The same advice applies to the <em>Advanced options</em> box. The only one I would consider toying with is the <em>Maximize border coin count</em> option: turn it off when you feel you will be running out of border coins soon (rule of thumb: &lt; 30% left).
+				</p>
+
+				<div class="separator"></div>
+
+				<h3>I cannot beat the Sphere Break Elites!</h3>
+				<p>
+					Don't give up! A fair amount of luck is needed, even with this tool, to beat the Elites. The only way to beat those opponents is to build very long Echo streaks and an Echo-destroying core number (e.g. 1) between turns 12-18 almost always means you are going to lose the game. 
+				</p>
+				<p>
+					I've beaten all three of them using the default settings that I've set above, and playing with the <em>Maximize border coin count</em> option when I felt I was running low on border coins. I also recommend using both the <em>Coin Count Echo</em> and the <em>Multiplier Echo</em>. You probably won't be able to keep both alive for very long, but every point counts.
+				</p>
+
+				<div class="separator"></div>
+
+				<h3>Can you add [...] to your algorithm?</h3>
+				<p>
+					No, but you are free to do it! Just fork the <a href="https://github.com/mbinette91/ffx2-sphere-break">project</a> and open a PR if you feel it would benefit everyone!
+				</p>
 			</div>
 		</div>
 		<div id="footer-section" class="section">
