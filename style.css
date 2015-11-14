@@ -86,7 +86,7 @@ textarea:focus, input:focus { outline: 0; }
 	display: inline-block;
 }
 .echo.box .echo-type label {
-	margin-bottom: 5px;
+	margin-bottom: 0;
 }
 
 .echo.box .echo-type .value {
@@ -108,7 +108,7 @@ textarea:focus, input:focus { outline: 0; }
 .echo.box .priority {
 	position: absolute;
 	left: 12.5%;
-	bottom: 0px;
+	bottom: 5px;
 	z-index: 0;
     border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0)) 1 1;
 	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,0.5), rgba(232,192,86,0));
