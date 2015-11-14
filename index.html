@@ -34,12 +34,12 @@
 						<input type="text" class="coin" id="grid-4-3" tabindex="10"/>
 						<input type="text" class="coin" id="grid-4-4" tabindex="10"/>
 					</div>
-					<input type="text" id="core_number" value="?" tabindex="11"/>
+					<input type="text" id="core_number" value="?" tabindex="11" data-toggle="tooltip" data-placement="top" title="Enter your core number here"/>
 				</div>
 
 				<div class="subsection ss-right">
 					<div class="solution box">
-						<div class="box-content">
+						<div class="box-content" data-toggle="tooltip" data-placement="left" title="This is the best solution found by the algorithm. Make sure to input it in the right order.">
 							<div class="box-title">Solution</div>
 							<div class="score">Score: <span id="score"></span></div>
 							<div class="echo-results">
@@ -79,8 +79,12 @@
 					<div class="advanced-options box">
 						<div class="box-content">
 							<div class="box-title">Advanced options</div>
-							<input type="checkbox" id="maximize_border" checked/> <label for="maximize_border">Maximize border coin count</label><br/>
-							<input type="checkbox" id="maximize_nines" checked/> <label for="maximize_nines">Maximize the number of (9)s played</label><br/>
+							<div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that have more border coins">
+								<input type="checkbox" id="maximize_border" checked/> <label for="maximize_border">Maximize border coin count</label>
+							</div>
+							<div data-toggle="tooltip" data-placement="left" title="Give more weight to solutions that use up (9)s">
+								<input type="checkbox" id="maximize_nines" checked/> <label for="maximize_nines">Maximize the number of (9)s played</label>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -92,20 +96,22 @@
 							<div class="echo-type">
 								<div class="name"><label for="priority_coin_count">Coin Count</label></div>
 								<input type="number" id="coin_count" class="value" value="5" max="6" tabindex="1"/>
-								<input type="radio" name="priority" id="priority_coin_count" value="coin_count" tabindex="2" checked/>
 							</div>
 							<div class="echo-type">
 								<div class="name"><label for="priority_multiplier">Multiplier</label></div>
 								<input type="number" id="multiplier_echo" class="value" value="4" max="99" tabindex="1"/>
+							</div>
+							<div class="priority" data-toggle="tooltip" data-placement="bottom" title="If the algorithm cannot find a solution that satisfies both multipliers, which one should it prioritize?">
+								<div class="box-title">Priority</div>
+								<input type="radio" name="priority" id="priority_coin_count" value="coin_count" tabindex="2" checked/>
 								<input type="radio" name="priority" id="priority_multiplier" value="multiplier_echo" tabindex="2"/> 
 							</div>
-							<div class="box-title priority">Priority</div>
 						</div>
 					</div>
 
 					<div class="actions">
-						<button class="btn btn-primary btn-block" onclick="find()">Find solution</button>
-						<button class="btn btn-success btn-block" onclick="incr()">Advance turn</button>
+						<button class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="bottom" title="Update the 'Solution' box" onclick="find()">Find solution</button>
+						<button class="btn btn-success btn-block" data-toggle="tooltip" data-placement="top" title="Increments all border coins by 1" onclick="incr()">Advance turn</button>
 					</div>
 				</div>
 			</div>

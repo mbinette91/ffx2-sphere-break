@@ -281,3 +281,12 @@ $("input").change(function(){
     if(!INCREMENTING)
         find();
 });
+
+/* Tooltips */
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+$("button").click(function(){
+    $(this).blur();
+});

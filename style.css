@@ -96,6 +96,7 @@ input[type="number"] {
 	display: inline-block;
 	position: relative;
     z-index: 1;
+    margin-bottom: 20px;
 }
 .echo.box .echo-type label {
 	margin-bottom: 0;
@@ -120,11 +121,27 @@ input[type="number"] {
 
 .echo.box .priority {
 	position: absolute;
+	bottom: 17px;
+	width: 90%;
+}
+.echo.box .priority .box-title {
+	position: absolute;
 	left: 12.5%;
-	bottom: 5px;
 	z-index: 0;
-    border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0)) 1 1;
+	border-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.5), rgba(255,255,255,0)) 1 1;
 	background: linear-gradient(to right, rgba(232,192,86,0), rgba(232,192,86,0.5), rgba(232,192,86,0));
+}
+
+.echo.box .priority input {
+	position: relative;
+	top: 1px;
+	z-index: 1;
+	width: 50%;
+	float: left;
+}
+
+.actions button{
+	margin-top: 5px;
 }
 
 /* Grid */
@@ -230,6 +247,12 @@ input[type="number"] {
 }
 .box.solution #solution .coin {
 	font-family: 'Arial', sans-serif;
+}
+
+.box.solution .tooltip {
+	width: 160px;
+	margin-left: 160px;
+	margin-top: 16px;
 }
 
 .box.advanced-options label {
