@@ -17,6 +17,9 @@ $('#main_grid .coin, #main_grid #core_number, .echo.box .value').on("keyup", fun
     return;
   }
 
+  if($(this).val() == '' && $(this).is(".coin, #core_number"))
+    return; // Let them delete numbers in coins only
+
   var old_val = $(this).data('previous-value');
   var value = parseInt($(this).val()); 
   var max = $(this).attr('max') || 9;

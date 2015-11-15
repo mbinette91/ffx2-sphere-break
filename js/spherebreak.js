@@ -222,15 +222,34 @@ SphereBreakController.prototype.findCurrentSolution = function() {
 
   var solution = grid.find(context);
 
+  // Set those now, because we might try alternate solutions later.
+  $("#score").html(solution.score(context));
+  $(".echo-results .coin_count .result").addClass(solution.satisfyCoinCountEcho(context)? "success" : "error");
+  $(".echo-results .multiplier .result").addClass(solution.satisfyMultiplierEcho(context)? "success" : "error");
+
+  if(!solution.works(context)) {
+    // If we didn't find any optimal solutions, we can try to at least not die.
+    var failedCoinCount = context.coinCount;
+    var min = parseInt($("#coin_count").attr('min'));
+    var max = parseInt($("#coin_count").attr('max'));
+    // Try lower
+    for(var tryCoinCount = failedCoinCount - 1; tryCoinCount >= min && !solution.works(context); tryCoinCount--) {
+      context.coinCount = tryCoinCount;
+      solution = grid.find(context);
+    }
+    // Try higher
+    for(var tryCoinCount = failedCoinCount + 1; tryCoinCount <= max && !solution.works(context); tryCoinCount++) {
+      context.coinCount = tryCoinCount;
+      solution = grid.find(context);
+    }
+  }
+
   var pos = 0;
   $("#solution .coin").val("");
   for(var i in solution.coins) {
     pos += 1;
     $("#solution").find("#" + solution.coins[i].elem.attr('id')).val( pos )
   }
-  $("#score").html(solution.score(context));
-  $(".echo-results .coin_count .result").addClass(solution.satisfyCoinCountEcho(context)? "success" : "error");
-  $(".echo-results .multiplier .result").addClass(solution.satisfyMultiplierEcho(context)? "success" : "error");
 }
 
 SphereBreakController.prototype.advanceTurn = function() {
