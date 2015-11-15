@@ -38,11 +38,24 @@ $('#main_grid .coin, #main_grid #core_number, .echo.box .value').on("keyup", fun
     $(this).select();
 });
 
+/* Controller */
+$(function () {
+  // Initialize controller and main functions
+  var controller = new SphereBreakController();
 
-$("#main-section input").on('change', function(){
-  if(!INCREMENTING)
-    find();
-});
+  $("#main-section input").on('change', function(){
+    controller.findCurrentSolution();
+  });
+
+  $("#action-find-solution").on('click', function() {
+    controller.findCurrentSolution();
+  });
+
+  $("#action-advance-turn").on('click', function(){
+    controller.advanceTurn();
+    controller.findCurrentSolution(); // Refresh.
+  });
+})
 
 /* Tooltips */
 $(function () {
@@ -54,4 +67,3 @@ $("#main-section button").click(function() {
   // Bug with tooltip: Click on first button, then hover the second one.
   $(this).blur();
 });
-

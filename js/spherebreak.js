@@ -1,8 +1,5 @@
 // Algorithm could be improved vastly by finding numbers instead of coins. 9 possible values (MAX) instead of 16 different coins. Less permutations. And then determine which coins to pick if solution works.
 // This solution starts lagging at 16 coins and 6+ sequences.
-var CURRENT_CONTEXT = { }
-var INCREMENTING = false;
-
 function Grid() {
   this.coins = [];
   this.entryCoins = [];
@@ -175,7 +172,11 @@ Solution.prototype.score = function(context) {
     return score + bonus; // Even make a 0 score solution win over everything else
 }
 
-function createCurrentGrid() {
+function SphereBreakController() {
+  this._advancingTurn = false;
+}
+
+SphereBreakController.prototype.getCurrentGrid = function() {
   var grid = new Grid();
 
   $("#main_grid .coin").each(function() {
@@ -193,8 +194,8 @@ function createCurrentGrid() {
   return grid;
 }
 
-function UpdateContext() {
-  CURRENT_CONTEXT = {
+SphereBreakController.prototype.getCurrentContext = function() {
+  return {
     maxSolution: new Solution(),
     coreNumber: parseInt($("#core_number").val()),
     coinCount: parseInt($("#coin_count").val()),
@@ -205,17 +206,19 @@ function UpdateContext() {
   }
 }
 
-function find() {
+SphereBreakController.prototype.findCurrentSolution = function() {
   $(".echo-results .result").removeClass("success");
   $(".echo-results .result").removeClass("error");
 
-  UpdateContext();
-  var context = CURRENT_CONTEXT;
+  if(this._advancingTurn)
+    return; // Do nothing.
+
+  var context = this.getCurrentContext();
 
   if(!(context.coreNumber >= 1 && context.coreNumber <= 9))
     return; // Nothing to do here!
 
-  var grid = createCurrentGrid();
+  var grid = this.getCurrentGrid();
 
   var solution = grid.find(context);
 
@@ -230,8 +233,8 @@ function find() {
   $(".echo-results .multiplier .result").addClass(solution.satisfyMultiplierEcho(context)? "success" : "error");
 }
 
-function incr() {
-  INCREMENTING = true;
+SphereBreakController.prototype.advanceTurn = function() {
+  this._advancingTurn = true;
   $("#main_grid .coin:not(.entry)").each(function(){
     var newVal = parseInt($(this).val())+1;
     if(newVal <= 9)
@@ -239,6 +242,5 @@ function incr() {
     else
       $(this).val("")
   });
-  INCREMENTING = false;
-  find(); // Refresh.
+  this._advancingTurn = false;
 }
