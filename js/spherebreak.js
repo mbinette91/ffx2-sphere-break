@@ -248,7 +248,7 @@ SphereBreakController.prototype.findCurrentSolution = function() {
   $("#solution .coin").val("");
   for(var i in solution.coins) {
     pos += 1;
-    $("#solution").find("#" + solution.coins[i].elem.attr('id')).val( pos )
+    $("#solution").find("#sol-" + solution.coins[i].elem.attr('id')).val( pos )
   }
 }
 
