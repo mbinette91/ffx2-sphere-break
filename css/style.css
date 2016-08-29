@@ -48,6 +48,16 @@ input[type="number"] { -moz-appearance: textfield; }
   padding-bottom: 20px;
 }
 
+#faq-section .share-strategy {
+  font-style: italic;
+  text-align: center;
+}
+
+#faq-section .more-strategies {
+  font-weight: bold;
+  text-align: center;
+}
+
 /* FAQ section */
 #footer-section {
   border-top: 1px solid #D3CECA;
