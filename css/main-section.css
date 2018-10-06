@@ -224,6 +224,7 @@
 
 /* Tooltips */
 .box.solution .tooltip {
+  pointer-events: none;
   width: 160px;
   margin-left: 160px;
   margin-top: 16px;
