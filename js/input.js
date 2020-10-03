@@ -54,8 +54,14 @@ $(function () {
     controller.findCurrentSolution();
   });
 
+  // "Advance turn" actions
   $("#action-advance-turn").on('click', function(){
     controller.advanceTurn();
+    controller.findCurrentSolution(); // Refresh.
+  });
+
+  $("#action-advance-turn-with-solution").on('click', function(){
+    controller.advanceTurnWithCurrentSolution();
     controller.findCurrentSolution(); // Refresh.
   });
 })

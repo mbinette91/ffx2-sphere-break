@@ -174,6 +174,7 @@ Solution.prototype.score = function(context) {
 
 function SphereBreakController() {
   this._advancingTurn = false;
+  this._currentSolution = null;
 }
 
 SphereBreakController.prototype.getCurrentGrid = function() {
@@ -250,6 +251,28 @@ SphereBreakController.prototype.findCurrentSolution = function() {
     pos += 1;
     $("#solution").find("#sol-" + solution.coins[i].elem.attr('id')).val( pos )
   }
+
+  this._currentSolution = solution;
+}
+
+SphereBreakController.prototype.advanceTurnWithCurrentSolution = function() {
+  var context = this.getCurrentContext();
+  if (!this._currentSolution || !this._currentSolution.works(context)) {
+    console.log("Current solution does not exist or work:", this._currentSolution)
+    return;
+  }
+
+  this._advancingTurn = true;
+
+  // Remove all border coins used in the current solution
+  var solution = this._currentSolution;
+  console.log("Removing border coins for solution:", solution);
+  for(var i in solution.coins) {
+    $("#main_grid").find("#" + solution.coins[i].elem.attr('id') + ":not(.entry)").val('')
+  }
+
+  // Finish "advanceTurn" normally
+  this.advanceTurn();
 }
 
 SphereBreakController.prototype.advanceTurn = function() {
