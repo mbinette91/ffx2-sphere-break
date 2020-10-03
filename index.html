@@ -119,8 +119,13 @@
           </div>
 
           <div class="actions">
-            <button id="action-find-solution" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="bottom" title="Update the 'Solution' box">Find solution</button>
-            <button id="action-advance-turn" class="btn btn-success btn-block" data-toggle="tooltip" data-placement="top" title="Increments all border coins by 1">Advance turn</button>
+            <button id="action-advance-turn" class="btn btn-success btn-block" data-toggle="tooltip" data-placement="bottom" title="Increments all border coins by 1">Advance turn</button>
+            <div id="find-solution-container">
+              <button id="action-find-solution" class="btn btn-primary btn-block" data-toggle="tooltip" data-placement="top" title="Update the 'Solution' box">Find solution</button>
+              <span id="find-solution-toggle-container" data-toggle="tooltip" data-placement="top" title="Automatically update the 'Solution' box when data changes">
+                <input id="find-solution-toggle" type="checkbox" checked data-toggle="toggle" data-on="Auto" data-off="Manual" data-onstyle="success" data-offstyle="secondary"/>
+              </span>
+            </div>
           </div>
         </div>
       </div>
