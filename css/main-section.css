@@ -109,10 +109,25 @@
   float: left;
 }
 
-.actions button.btn {
+#action-advance-turn, #find-solution-container {
   margin-top: 5px;
+}
+
+.actions .btn {
   font-size: inherit;
   line-height: inherit;
+}
+
+#find-solution-container {
+  position: relative;
+}
+
+#find-solution-toggle-container {
+  min-width: 80px;
+  transform: scale(0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /* Grid */
