@@ -46,18 +46,46 @@ $(function () {
   // Initialize controller and main functions
   var controller = new SphereBreakController();
 
-  $("#main-section input").on('change', function(){
-    controller.findCurrentSolution();
-  });
+  var isAutoUpdateSolutionOn = function() {
+    return $("#find-solution-toggle").prop('checked');
+  }
 
-  $("#action-find-solution").on('click', function() {
-    controller.findCurrentSolution();
+  var staleSolution = false;
+  $("#main-section input").on('change', function() {
+    if($(this).is($("#find-solution-toggle")))
+      return; // We have a different handler for this below.
+
+    if (isAutoUpdateSolutionOn()) {
+      controller.findCurrentSolution();
+      staleSolution = false;
+    }
+    else {
+      staleSolution = true;
+    }
   });
 
   $("#action-advance-turn").on('click', function(){
     controller.advanceTurn();
     controller.findCurrentSolution(); // Refresh.
+    staleSolution = false;
   });
+
+  $("#action-find-solution").on('click', function() {
+    controller.findCurrentSolution();
+    staleSolution = false;
+  });
+
+  // Initialize the FindSolution button & toggle
+  $("#find-solution-toggle").change(function(){
+    $("#action-find-solution").prop('disabled', isAutoUpdateSolutionOn());
+    if (isAutoUpdateSolutionOn() && staleSolution) {
+      controller.findCurrentSolution();
+      staleSolution = false;
+    }
+  });
+
+  $("#action-find-solution").prop('disabled', isAutoUpdateSolutionOn());
+
 })
 
 /* Tooltips */
