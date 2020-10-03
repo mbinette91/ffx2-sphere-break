@@ -64,18 +64,25 @@ $(function () {
     }
   });
 
+  // "Advance turn" actions
   $("#action-advance-turn").on('click', function(){
     controller.advanceTurn();
     controller.findCurrentSolution(); // Refresh.
     staleSolution = false;
   });
 
+  $("#action-advance-turn-with-solution").on('click', function(){
+    controller.advanceTurnWithCurrentSolution();
+    controller.findCurrentSolution(); // Refresh.
+    staleSolution = false;
+  });
+
+  // FindSolution button & toggle
   $("#action-find-solution").on('click', function() {
     controller.findCurrentSolution();
     staleSolution = false;
   });
 
-  // Initialize the FindSolution button & toggle
   $("#find-solution-toggle").change(function(){
     $("#action-find-solution").prop('disabled', isAutoUpdateSolutionOn());
     if (isAutoUpdateSolutionOn() && staleSolution) {
@@ -85,7 +92,6 @@ $(function () {
   });
 
   $("#action-find-solution").prop('disabled', isAutoUpdateSolutionOn());
-
 })
 
 /* Tooltips */

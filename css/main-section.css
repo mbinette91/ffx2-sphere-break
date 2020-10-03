@@ -237,6 +237,21 @@
   font-family: 'Arial', sans-serif;
 }
 
+#action-advance-turn-with-solution {
+  display: none;
+}
+
+.box.solution:hover #action-advance-turn-with-solution {
+  display: block;
+  z-index: 100;
+  position: absolute;
+  bottom: 5px;
+  right: -1px;
+  width: 47%;
+  transform: scale(0.85);
+  font-size: inherit;
+}
+
 .box.advanced-options label {
   margin: 0; 
   font-weight: normal; 
