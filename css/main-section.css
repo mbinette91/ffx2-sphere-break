@@ -109,11 +109,17 @@
   float: left;
 }
 
-.actions button{
+.actions button.btn {
   margin-top: 5px;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 /* Grid */
+.row {
+  display: block;
+}
+
 .coin {
   position: relative;
   z-index: 1;
@@ -157,6 +163,7 @@
   box-shadow: 2px 2px 3px rgba(200,200,200,0.5),
              -2px -2px 3px rgba(200,200,200,0.5);
   z-index: 2;
+  color: inherit;
 }
 
 .ss-right {
@@ -223,9 +230,14 @@
 }
 
 /* Tooltips */
-.box.solution .tooltip {
+.tooltip.solution {
   pointer-events: none;
   width: 160px;
-  margin-left: 160px;
-  margin-top: 16px;
+  left: 160px !important;
+  top: 16px !important;
 }
+
+.tooltip {
+  font-size: 12px;
+}
+
