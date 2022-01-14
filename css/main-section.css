@@ -227,10 +227,12 @@
 
 .box.solution #solution {
   display: inline-block;
-  zoom: 34%;
   position: absolute;
   right: 45px;
   top: 22px;
+  /* Next two lines are equivalent to `zoom: 34%;` which FF doesn't support. */
+  transform: scale(0.34);
+  margin: -129px -136px;
 }
 
 .box.solution #solution .coin {
